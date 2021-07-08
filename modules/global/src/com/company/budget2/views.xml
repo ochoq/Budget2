@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
+
+    <view entity="budget2_Topic" name="topics" extends="_local">
+        <property name="iprb" view="_minimal">
+            <property name="icTag"/>
+        </property>
+    </view>
+</views>

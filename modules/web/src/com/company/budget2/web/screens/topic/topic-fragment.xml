@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fragment xmlns="http://schemas.haulmont.com/cuba/screen/fragment.xsd">
+    <data>
+        <instance id="topicDc"
+                  class="com.company.budget2.entity.demand.Topic"
+                  view="topics">
+            <loader/>
+        </instance>
+    </data>
+    <layout>
+        <hbox width="500px" expand="name">
+
+            <textField dataContainer="topicDc" property="name" id="name"/>
+            <textField dataContainer="topicDc" property="q1" id="q1" datatype="int" width="50px"/>
+            <textField dataContainer="topicDc" property="q2" id="q2" datatype="int" width="50px"/>
+            <textField dataContainer="topicDc" property="q3" id="q3" datatype="int" width="50px"/>
+            <textField dataContainer="topicDc" property="q4" id="q4" datatype="int" width="50px"/>
+            <linkButton id="addTopic" width="50px" icon="MINUS_CIRCLE" invoke="onAddTopicClick"/>
+        </hbox>
+    </layout>
+</fragment>
+

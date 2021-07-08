@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fragment xmlns="http://schemas.haulmont.com/cuba/screen/fragment.xsd">
+    <data>
+        <instance id="iPRBDc"
+                  class="com.company.budget2.entity.demand.IPRB"
+                  view="_local">
+            <loader/>
+        </instance>
+        <collection id="topicsDc" class="com.company.budget2.entity.demand.Topic" view="topics">
+            <loader id="topicsDl">
+                <query>
+                    <![CDATA[select e from budget2_Topic e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+
+        <vbox margin="false,false,true,false">
+            <hbox width="600px" expand="icTag">
+
+                <textField dataContainer="iPRBDc" property="icTag" id="icTag"/>
+                <textField width="50px" datatype="int" id="q1" dataContainer="iPRBDc" property="q1"/>
+                <textField width="50px" datatype="int" id="q2" dataContainer="iPRBDc" property="q2"/>
+                <textField width="50px" datatype="int" id="q3" dataContainer="iPRBDc" property="q3"/>
+                <textField width="50px" datatype="int" id="q4" dataContainer="iPRBDc" property="q4"/>
+                <linkButton width="25px" id="addTopic" icon="PLUS_CIRCLE" invoke="onAddTopicClick"/>
+                <linkButton width="25px" id="toggleView" icon="VIEW_ACTION" invoke="onToggleViewClick"/>
+
+            </hbox>
+            <hbox>
+                <label width="100px"/>
+                <vbox id="topicList"/>
+            </hbox>
+
+        </vbox>
+    </layout>
+</fragment>
+
